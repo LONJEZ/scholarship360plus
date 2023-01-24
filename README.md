@@ -1,1 +1,1 @@
-# scholarship360plus
+# scholar360plus
