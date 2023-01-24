@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="login.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+/>
+
+<form action="#">
+  <div class="container">
+    <h1 class="heading">
+      Login to Scholar360Plus
+      <i class="icon fa-solid fa-graduation-cap fa-2x"></i>
+    </h1>
+    <hr />
+
+    <label for="email"><b>Email:</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required />
+
+    <label for="psw"><b>Password:</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required />
+
+    <label>
+      <input
+        type="checkbox"
+        checked="checked"
+        name="remember"
+        style="margin-bottom: 15px"
+      />
+      Remember me
+    </label>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Login</button>
+    </div>
+    <p>Do not have an account? <a href="/users/register">Register</a></p>
+  </div>
+</form>
