@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>Scholar360Plus</title>
+
   <link rel="stylesheet" href="style.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
@@ -21,35 +22,123 @@
         <li><a href="#/register.html">Register</a></li>
       </ul>
     </div>
-    <div class="home">
+    <div class="carousel">
       <h1 class="heading">
-        Welcome to home of scholarships. Theatre of dreams.
+        Welcome to Home of Scholarships. Theatre of Dreams.
+        <br>
       </h1>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="image">
+            <div class="caption">
+              <h2 class="caption-heading">Create a successful future by accessing multiple fully funded Bachelors,
+                Masters and PhD scholarships for all courses.
+              </h2>
+              <br>
+              <h3 style="font-weight: normal;">Sign up to start applying for scholarships. Visiting your dream country
+                and getting that degree
+                is few
+                steps away.</h3>
+              <h4 style="margin-top: 30px; text-align: center; font-weight: lighter;">A "Kwaheri Kenya" would do wonders
+                to you.</h4>
 
-      <div class="image">
-        <div class="left-column">
-          <img src="public/students.jpg" style="height: auto; width: 90%" />
+              <a href="/register">
+                <button class="button">Sign Up For Free</button></a>
+            </div>
+            <br />
+            <div class="right-column">
+              <img src="public/image2.png" style="height: auto; width: 90%; margin-top: 0px;" />
+            </div>
+          </div>
         </div>
-        <h3 class="caption">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-          perferendis aliquam!m, accusamus nobis unde quidem dignissimos
-          inventore dicta mollitia.
-          <a href="/Login"> <button class="button">Login</button></a>
-        </h3>
-      </div>
-      <div class="image">
-        <h1 class="caption">
-          Need a Scholarship? <span>Look no further</span> <br />
-          <a href="/register">
-            <button class="button">Sign up for Free</button></a>
-        </h1>
-        <br />
 
-        <div class="right-column">
-          <img src="public/obama.jpg" style="height: auto; width: 90%" />
+        <div class="mySlides fade">
+          <div class="image">
+            <div class="caption">
+              <h2 class="caption-heading"> <i>Need to advance your education?</i> <br />
+                We have you covered 24/7.</h2>
+              <h3 style="font-weight: normal; margin-top: 20px;">There are plenty of fully funded scholarships that
+                match your interets.
+                Fully funded scholarships come
+                with monthly stipend and other benefits like medical insurance, two air ticket, laptop, books,
+                completion and research grants.
+              </h3>
+              <h2 style="margin-top: 20px; text-align: center; font-weight: lighter;">Unlock
+                Your Potential Now...</h2>
+              <a href="/register">
+                <button class="button">Sign Up</button></a>
+              </h1>
+              <br />
+            </div>
+            <div class="right-column">
+              <img src="public/image6.png" style="height: auto; width: 90%" />
+            </div>
+          </div>
         </div>
+        <div class="mySlides fade">
+          <div class="image">
+            <div class="left-column">
+              <img src="public/image4.png" style="height: auto; width: 90%" />
+            </div>
+            <div class="caption">
+              <h2 class="caption-heading">Through our platform hundreds of students have successfully applied for
+                scholarships to countries of their interest. </h2>
+              <br>
+              <h3 style="font-weight: normal;">Follow the link of each scholarship to get full details and apply.</h3>
+              <h4 style="margin-top: 30px; text-align: center; font-weight: lighter;">"Adios Kenya" would change
+                your future for good forever.</h4>
+
+              <a href="/register">
+                <button class="button">Sign Up For Free</button></a>
+            </div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
+      <br />
+
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1
+          }
+          if (n < 1) {
+            slideIndex = slides.length
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
     </div>
+
     <div id="features">
       <h2 class="feat-heading">
         Why Scholar360Plus?
@@ -59,23 +148,23 @@
         <div class="column">
           <div class="card-text">
             <i class="icon fa-solid fa-envelope fa-2x"></i>
-
             <p>
-              We are in touch with universties and colleges offering
-              scholarships
+              We are in constant touch with governments, universties and colleges offering fully funded
+              scholarships.
             </p>
           </div>
         </div>
         <div class="column">
           <div class="card-text">
             <i class="icon fa-solid fa-clock-rotate-left fa-2x"></i>
-            <p>The scholarships are updated on regular basis</p>
+            <p>The scholarships are updated on regular basis.</p>
           </div>
         </div>
         <div class="column">
           <div class="card-text">
             <i class="icon fa-solid fa-earth-americas fa-2x"></i>
-            <p>We connect with students globally</p>
+            <p>We are connected to other international students in USA, Canada, UK, Australia, New Zealand, Asia and
+              Middle East. </p>
           </div>
         </div>
       </div>
@@ -85,8 +174,7 @@
           <div class="card-text">
             <i class="icon fa-solid fa-crown fa-2x"></i>
             <p class="text">
-              We are the best in what we do on earth and any unidnetifed
-              planet that supports life
+              There is a full funded scholarship for everyone and all courses in Bachelors, Masters, PhD and Reseearch.
             </p>
           </div>
         </div>
@@ -94,8 +182,8 @@
           <div class="card-text">
             <i class="icon far fa-file-alt fa-2x"></i>
             <p>
-              We offer tips and guidance on scholarship like writing
-              testimonails, statement of purpose and application letter.
+              Through the Tips Section we offer tips and guidance on scholarships like passing IELTS, writing
+              testimonails, statement of purpose, application letters and settling in foreign country.
             </p>
           </div>
         </div>
@@ -103,9 +191,37 @@
           <div class="card-text">
             <i class="icon fa-solid fa-phone-volume fa-2x"></i>
             <p>
-              We offer 24/7 suppport on earth and any unidentified planets
+              We offer 24/7 suppport to all scholars; those studying and those applying.
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials">
+      <h2 class="feat-heading">What Scholars Say...</h2>
+      <div class="roww">
+        <div class="columnn">
+          <q>I will always thank Scholar360Plus for making my masters education attainable. I am proud to say I have
+            worked hard to be where I am, but I certainly could not studying in Australia without their input.</q>
+          <p class="name">Mathew Madayo, Australia</p>
+        </div>
+        <div class="columnn">
+          <q>I am truly grateful to this platform. It helped my family and I sigficantly by securing the scholarship. I
+            unlocked my potential and will be graduting soon with degree in Civil Engineering.</q>
+          <p class="name">Carlos Omuga, <span> Canada</span></p>
+        </div>
+      </div>
+      <div class="roww">
+        <div class="columnn">
+          <q>Scholar360Plus provides numerous opportunities for learning and growth. I am now at my third semester and
+            my future is getting brighter day by day.</q>
+          <p class="name">Collins Oyaro, <span> Japan</span></p>
+        </div>
+        <div class="columnn">
+          <q>There are no words to express how grateful I am to have gotten the opportunity to further my education.
+            Scholar360Plus makes higher education possible for so many students, and with that comes the key to all
+            other successes.</q>
+          <p class="name">Judith Sarah, <span> United Kingdom</span></p>
         </div>
       </div>
     </div>
